@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="bn" class="antialiased selection:bg-gold selection:text-void">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ড. মোস্তফা ফয়সাল পারভেজ | ভিশন ২০২৫</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500;600;800&family=Hind+Siliguri:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              void: "#022c22", // Deepest Emerald/Black
+              cream: "#F9F7F2", // Luxurious Paper
+              gold: "#D4AF37", // Muted Champagne Gold
+              "gold-light": "#F3E5AB",
+              "slate-muted": "#64748b",
+            },
+            fontFamily: {
+              display: ['"Anek Bangla"', "sans-serif"],
+              body: ['"Hind Siliguri"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Styles -->
+    <style>
+      :root {
+        --cursor-size: 10px;
+      }
+
+      body {
+        background-color: #f9f7f2;
+        color: #022c22;
+        overflow-x: hidden;
+        cursor: none; /* Custom cursor active */
+      }
+
+      /* Custom Cursor */
+      #cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--cursor-size);
+        height: var(--cursor-size);
+        background-color: #022c22;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s;
+      }
+      #cursor.hovered {
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: 1px solid #d4af37;
+        mix-blend-mode: difference;
+      }
+
+      /* Smooth Scroll (Lenis) */
+      html.lenis {
+        height: auto;
+      }
+      .lenis.lenis-smooth {
+        scroll-behavior: auto;
+      }
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+
+      /* Loader */
+      .preloader {
+        position: fixed;
+        inset: 0;
+        background-color: #022c22;
+        z-index: 10000;
+        display: flex;
+        flex-col: column;
+        justify-content: center;
+        align-items: center;
+        color: #f9f7f2;
+      }
+      .loader-line {
+        width: 0%;
+        height: 2px;
+        background-color: #d4af37;
+        margin-top: 2rem;
+      }
+
+      /* Mobile Menu Overlay */
+      .mobile-menu {
+        position: fixed;
+        inset: 0;
+        background-color: #022c22;
+        z-index: 999;
+        transform: translateY(-100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Grid Lines */
+      .grid-line {
+        position: absolute;
+        background-color: rgba(2, 44, 34, 0.05);
+        z-index: 0;
+      }
+      .line-v {
+        width: 1px;
+        height: 100%;
+        top: 0;
+      }
+
+      /* Utilities */
+      .text-outline {
+        -webkit-text-stroke: 1px rgba(2, 44, 34, 0.2);
+        color: transparent;
+      }
+
+      /* Marquee Animation */
+      .marquee-container {
+        display: flex;
+        overflow: hidden;
+      }
+      .marquee-content {
+        flex-shrink: 0;
+        display: flex;
+        gap: 4rem;
+        min-width: 100%;
+        animation: scroll 30s linear infinite;
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(calc(-100% - 4rem));
+        }
+      }
+    </style>
+  </head>
+  <body class="font-body bg-cream">
+    <div id="cursor"></div>
+
+    <!-- 1. AWESOME PRELOADER -->
+    <div class="preloader">
+      <div class="relative overflow-hidden text-center">
+        <h1
+          class="font-display font-light text-5xl md:text-8xl tracking-tighter uppercase"
+        >
+          <span class="inline-block translate-y-full reveal-text-load"
+            >Vision</span
+          >
+          <span
+            class="inline-block translate-y-full reveal-text-load font-bold text-gold"
+            >2025</span
+          >
+        </h1>
+        <p
+          class="font-serif italic text-lg md:text-2xl mt-4 opacity-0 reveal-sub-load"
+        >
+          Dr. Mostofa Faisal Pervez
+        </p>
+      </div>
+      <div class="w-64 h-[1px] bg-white/10 mt-8 relative overflow-hidden">
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-gold origin-left loader-bar"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+      <div class="flex flex-col gap-8 text-center">
+        <a
+          href="#about"
+          class="mobile-link text-4xl font-display font-bold text-cream hover:text-gold transition-colors"
+          >প্রোফাইল</a
+        >
+        <a
+          href="#vision"
+          class="mobile-link text-4xl font-display font-bold text-cream hover:text-gold transition-colors"
+          >ভিশন</a
+        >
+        <a
+          href="#campaign"
+          class="mobile-link text-4xl font-display font-bold text-cream hover:text-gold transition-colors"
+          >গণসংযোগ</a
+        >
+        <a
+          href="#connect"
+          class="mobile-link text-4xl font-display font-bold text-cream hover:text-gold transition-colors"
+          >যোগাযোগ</a
+        >
+      </div>
+      <button
+        class="mobile-menu-close absolute top-8 right-6 text-cream hoverable"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-10 h-10"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Background Grid -->
+    <div
+      class="fixed inset-0 pointer-events-none w-full h-full max-w-[1920px] mx-auto border-x border-void/5"
+    >
+      <div class="grid-line line-v left-[15%] hidden md:block"></div>
+      <div class="grid-line line-v left-[50%]"></div>
+      <div class="grid-line line-v left-[85%] hidden md:block"></div>
+    </div>
+
+    <!-- 2. NAVIGATION (Fixed Visibility & Mobile Toggle) -->
+    <nav
+      class="fixed top-0 w-full px-6 py-5 md:px-12 md:py-6 z-50 flex justify-between items-center bg-cream/80 backdrop-blur-md border-b border-void/5"
+    >
+      <a
+        href="#"
+        class="font-display font-bold text-xl md:text-2xl tracking-tighter hoverable uppercase text-void"
+      >
+        ড. M. F. Pervez
+      </a>
+
+      <!-- Desktop Menu -->
+      <div
+        class="hidden md:flex gap-10 font-body text-sm uppercase tracking-[0.2em] text-void font-medium"
+      >
+        <a href="#about" class="hoverable hover:text-gold transition-colors"
+          >প্রোফাইল</a
+        >
+        <a href="#vision" class="hoverable hover:text-gold transition-colors"
+          >ভিশন</a
+        >
+        <a href="#campaign" class="hoverable hover:text-gold transition-colors"
+          >গণসংযোগ</a
+        >
+        <a href="#connect" class="hoverable hover:text-gold transition-colors"
+          >যোগাযোগ</a
+        >
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!-- Support Button -->
+        <button
+          class="hidden md:block hoverable border border-void px-6 py-2 text-xs uppercase tracking-widest hover:bg-void hover:text-cream transition-all duration-300 text-void font-semibold"
+        >
+          সমর্থন দিন
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="md:hidden mobile-menu-toggle hoverable text-void">
+          <span class="sr-only">Menu</span>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold tracking-widest">MENU</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </nav>
+
+    <main class="w-full relative z-10">
+      <!-- Hero Section -->
+      <section
+        class="min-h-screen relative flex flex-col justify-center overflow-hidden pt-20 md:pt-0"
+      >
+        <!-- Mobile Watermark -->
+        <div
+          class="absolute bottom-20 right-[-15%] w-[80vw] md:hidden pointer-events-none opacity-[0.05] z-0"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Daripalla.png"
+            alt="Symbol"
+            class="w-full h-auto object-contain"
+          />
+        </div>
+
+        <div class="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="col-span-1 md:col-span-8 relative">
+              <div class="border-l-2 border-gold/70 pl-6 md:pl-10 py-2">
+                <p
+                  class="font-serif text-gold italic text-lg md:text-2xl mb-4 tracking-widest reveal-hero"
+                >
+                  যোগ্যতা • সততা • নেতৃত্ব
+                </p>
+                <h1
+                  class="font-display font-bold text-3xl md:text-4xl text-void mb-2 reveal-hero"
+                >
+                  ড.
+                </h1>
+                <h1
+                  class="font-display font-light text-6xl sm:text-7xl md:text-8xl lg:text-[9vw] leading-[0.9] md:leading-[0.85] tracking-tight uppercase text-void reveal-hero"
+                >
+                  মোস্তফা <br class="md:hidden" />
+                  <span class="font-bold block md:inline">ফয়সাল</span>
+                  <span class="block md:inline">পারভেজ</span>
+                </h1>
+              </div>
+
+              <div class="h-6 md:hidden"></div>
+
+              <div class="mt-8 md:mt-12 max-w-xl pl-6 md:pl-10 reveal-hero">
+                <p
+                  class="font-body text-base md:text-lg text-void/80 leading-relaxed"
+                >
+                  একটি উন্নত, সমৃদ্ধ ও দুর্নীতিমুক্ত দেশ গড়ার প্রতিশ্রুতি নিয়ে
+                  ২০২৫-এর নির্বাচনে জনগণের সেবায় নিয়োজিত।
+                </p>
+                <div class="flex items-center gap-4 mt-8">
+                  <div class="w-12 h-[1px] bg-void/20"></div>
+                  <span
+                    class="text-xs font-bold uppercase tracking-widest text-void/40"
+                    >Scroll</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop Image -->
+            <div
+              class="hidden md:flex md:col-span-4 relative h-full justify-end items-center pointer-events-none reveal-hero-img opacity-0 translate-x-10"
+            >
+              <div class="relative w-full opacity-100">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Daripalla.png"
+                  alt="Symbol"
+                  class="w-full h-auto object-contain drop-shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-cream to-transparent z-20"
+        ></div>
+      </section>
+
+      <!-- Marquee -->
+      <div
+        class="py-4 md:py-6 border-y border-void/10 bg-void text-cream overflow-hidden relative z-20"
+      >
+        <div
+          class="marquee-container font-display font-light text-2xl md:text-5xl uppercase tracking-wider opacity-80"
+        >
+          <div class="marquee-content">
+            <span>সততা • নিষ্ঠা • উন্নয়ন •</span>
+            <span class="font-serif italic text-gold"
+              >ড. মোস্তফা ফয়সাল পারভেজ ২০২৫</span
+            >
+            <span>সততা • নিষ্ঠা • উন্নয়ন •</span>
+            <span class="font-serif italic text-gold"
+              >ড. মোস্তফা ফয়সাল পারভেজ ২০২৫</span
+            >
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+            <span>সততা • নিষ্ঠা • উন্নয়ন •</span>
+            <span class="font-serif italic text-gold"
+              >ড. মোস্তফা ফয়সাল পারভেজ ২০২৫</span
+            >
+            <span>সততা • নিষ্ঠা • উন্নয়ন •</span>
+            <span class="font-serif italic text-gold"
+              >ড. মোস্তফা ফয়সাল পারভেজ ২০২৫</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <section
+        id="about"
+        class="py-20 md:py-32 px-4 md:px-12 bg-cream relative"
+      >
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20 items-center max-w-7xl mx-auto"
+        >
+          <div class="relative order-2 lg:order-1">
+            <div
+              class="absolute -top-4 -left-4 w-full h-full border border-gold opacity-50 hidden lg:block"
+            ></div>
+            <div
+              class="relative w-full h-[50vh] md:h-[80vh] bg-gray-200 overflow-hidden reveal-img-wrapper group"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1000&auto=format&fit=crop"
+                alt="Profile"
+                class="w-full h-full object-cover grayscale contrast-125 transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 p-6 md:p-8 bg-gradient-to-t from-void/90 to-transparent w-full"
+              >
+                <p class="font-serif text-gold italic text-lg md:text-xl">
+                  Since 2005
+                </p>
+                <p
+                  class="text-cream text-xs md:text-sm uppercase tracking-widest mt-1"
+                >
+                  Serving the Nation
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center order-1 lg:order-2">
+            <h2
+              class="font-display font-thin text-5xl md:text-8xl mb-4 md:mb-8 leading-none"
+            >
+              দিন বদলের <br />
+              <span class="font-bold text-void">কারিগর</span>
+            </h2>
+            <div class="w-16 md:w-24 h-[1px] bg-gold mb-8 md:mb-10"></div>
+            <p
+              class="font-body text-lg md:text-2xl leading-loose text-slate-700 mb-8 md:mb-10"
+            >
+              "রাজনীতি কোনো পেশা নয়, এটি একটি ব্রত।" - ড. মোস্তফা ফয়সাল পারভেজ
+              এই মন্ত্রেই বিশ্বাসী।
+            </p>
+            <ul
+              class="space-y-4 md:space-y-6 font-display text-lg md:text-xl text-void"
+            >
+              <li
+                class="flex items-center gap-4 group cursor-default hoverable"
+              >
+                <span
+                  class="w-3 h-3 border border-void rounded-full group-hover:bg-gold transition-colors"
+                ></span>
+                <span>শিক্ষা ব্যবস্থার আধুনিকায়ন</span>
+              </li>
+              <li
+                class="flex items-center gap-4 group cursor-default hoverable"
+              >
+                <span
+                  class="w-3 h-3 border border-void rounded-full group-hover:bg-gold transition-colors"
+                ></span>
+                <span>স্মার্ট নগর পরিকল্পনা</span>
+              </li>
+            </ul>
+            <div class="mt-12 md:mt-16">
+              <a
+                href="#"
+                class="inline-block border-b border-void pb-1 text-sm uppercase tracking-[0.3em] hover:text-gold hover:border-gold transition-colors hoverable"
+                >সম্পূর্ণ জীবনী পড়ুন</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision Section -->
+      <section
+        id="vision"
+        class="py-20 md:py-32 px-4 md:px-12 bg-void text-cream relative"
+      >
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-full bg-white/5 hidden md:block"
+        ></div>
+        <div class="text-center mb-16 md:mb-24 relative z-10">
+          <span class="font-serif italic text-gold text-xl">Our Strategy</span>
+          <h2 class="font-display font-bold text-4xl md:text-7xl mt-4">
+            উন্নয়নের রূপরেখা
+          </h2>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 max-w-7xl mx-auto"
+        >
+          <div
+            class="bg-void p-8 md:p-12 group hover:bg-white/5 transition-colors duration-500 hoverable border-b md:border-b-0 md:border-r border-white/10"
+          >
+            <span
+              class="font-serif text-5xl md:text-6xl text-white/10 group-hover:text-gold transition-colors duration-500"
+              >I.</span
+            >
+            <h3
+              class="font-display font-semibold text-2xl md:text-3xl mt-4 md:mt-8 mb-4"
+            >
+              অর্থনৈতিক মুক্তি
+            </h3>
+            <p class="text-white/60 leading-relaxed font-light">
+              ক্ষুদ্র ও মাঝারি শিল্পের বিকাশে বিশেষ প্রণোদনা।
+            </p>
+          </div>
+          <div
+            class="bg-void p-8 md:p-12 group hover:bg-white/5 transition-colors duration-500 hoverable border-b md:border-b-0 md:border-r border-white/10"
+          >
+            <span
+              class="font-serif text-5xl md:text-6xl text-white/10 group-hover:text-gold transition-colors duration-500"
+              >II.</span
+            >
+            <h3
+              class="font-display font-semibold text-2xl md:text-3xl mt-4 md:mt-8 mb-4"
+            >
+              নিরাপদ সড়ক
+            </h3>
+            <p class="text-white/60 leading-relaxed font-light">
+              আধুনিক ট্রাফিক ব্যবস্থাপনা এবং ফুটপাথ নিশ্চিতকরণ।
+            </p>
+          </div>
+          <div
+            class="bg-void p-8 md:p-12 group hover:bg-white/5 transition-colors duration-500 hoverable"
+          >
+            <span
+              class="font-serif text-5xl md:text-6xl text-white/10 group-hover:text-gold transition-colors duration-500"
+              >III.</span
+            >
+            <h3
+              class="font-display font-semibold text-2xl md:text-3xl mt-4 md:mt-8 mb-4"
+            >
+              ডিজিটাল সেবা
+            </h3>
+            <p class="text-white/60 leading-relaxed font-light">
+              নাগরিক সেবা প্রাপ্তি সহজীকরণে অটোমেশন।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. NEW SECTION: CAMPAIGN GALLERY -->
+      <section
+        id="campaign"
+        class="py-20 md:py-32 px-4 md:px-12 bg-cream relative overflow-hidden"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24"
+          >
+            <div>
+              <span class="font-serif italic text-slate-500 text-xl block mb-2"
+                >Campaign Gallery</span
+              >
+              <h2 class="font-display font-bold text-4xl md:text-7xl text-void">
+                গণসংযোগ ও <br /><span class="text-gold">প্রচারণা</span>
+              </h2>
+            </div>
+            <p
+              class="max-w-md text-slate-600 mt-6 md:mt-0 font-body text-lg leading-relaxed"
+            >
+              জনগণের দুয়ারে ড. মোস্তফা ফয়সাল পারভেজ। প্রতিটি পদক্ষেপে তিনি
+              শুনছেন মানুষের কথা, বুনছেন নতুন দিনের স্বপ্ন।
+            </p>
+          </div>
+
+          <!-- Masonry Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]"
+          >
+            <!-- Large Item -->
+            <div
+              class="md:col-span-2 row-span-2 relative group overflow-hidden bg-gray-200 hoverable"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=1000&auto=format&fit=crop"
+                alt="Rally"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+              />
+              <div
+                class="absolute inset-0 bg-void/20 group-hover:bg-transparent transition-colors"
+              ></div>
+              <div class="absolute bottom-6 left-6 text-cream">
+                <p
+                  class="text-xs font-bold uppercase tracking-widest bg-gold/90 text-void px-2 py-1 inline-block mb-2"
+                >
+                  মহাসমাবেশ
+                </p>
+                <h3 class="font-display text-2xl font-bold">
+                  রাজশাহী জনসভা ২০২৫
+                </h3>
+              </div>
+            </div>
+
+            <!-- Tall Item -->
+            <div
+              class="row-span-1 md:row-span-2 relative group overflow-hidden bg-gray-200 hoverable"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1000&auto=format&fit=crop"
+                alt="Meeting"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+              />
+              <div class="absolute bottom-6 left-6 text-cream">
+                <p
+                  class="text-xs font-bold uppercase tracking-widest bg-gold/90 text-void px-2 py-1 inline-block mb-2"
+                >
+                  উঠান বৈঠক
+                </p>
+                <h3 class="font-display text-2xl font-bold">তৃণমূল সংলাপ</h3>
+              </div>
+            </div>
+
+            <!-- Standard Item -->
+            <div class="relative group overflow-hidden bg-gray-200 hoverable">
+              <img
+                src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1000&auto=format&fit=crop"
+                alt="Crowd"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+              />
+            </div>
+
+            <!-- Standard Item -->
+            <div class="relative group overflow-hidden bg-gray-200 hoverable">
+              <img
+                src="https://images.unsplash.com/photo-1529101091760-6149d4c81f22?q=80&w=1000&auto=format&fit=crop"
+                alt="Handshake"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+              />
+              <div class="absolute bottom-6 left-6 text-cream">
+                <h3 class="font-display text-2xl font-bold">যুব সমাজ</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section
+        id="connect"
+        class="min-h-screen bg-cream flex flex-col justify-center items-center px-4 md:px-6 text-center relative overflow-hidden"
+      >
+        <h1
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-display font-bold text-void opacity-[0.03] whitespace-nowrap pointer-events-none select-none"
+        >
+          VOTE 2025
+        </h1>
+        <div class="relative z-10 max-w-4xl">
+          <p
+            class="font-serif text-xl md:text-3xl italic text-slate-500 mb-6 md:mb-8"
+          >
+            "Together, we build the future."
+          </p>
+          <h2
+            class="font-display font-bold text-4xl md:text-9xl text-void mb-8 md:mb-12 tracking-tight"
+          >
+            ড. মোস্তফা ফয়সাল পারভেজ
+          </h2>
+          <div
+            class="flex flex-col md:flex-row gap-4 md:gap-8 justify-center items-center"
+          >
+            <a
+              href="#"
+              class="hoverable w-full md:w-auto px-8 py-3 md:px-12 md:py-4 bg-void text-cream font-display text-base md:text-lg hover:bg-gold hover:text-void transition-all duration-300"
+              >স্বেচ্ছাসেবী হোন</a
+            >
+            <a
+              href="#"
+              class="hoverable w-full md:w-auto px-8 py-3 md:px-12 md:py-4 border border-void text-void font-display text-base md:text-lg hover:bg-void hover:text-cream transition-all duration-300"
+              >অনুদান দিন</a
+            >
+          </div>
+        </div>
+        <div
+          class="absolute bottom-6 md:bottom-12 left-0 w-full flex justify-center gap-8 md:gap-12 font-sans text-xs uppercase tracking-widest text-void/60"
+        >
+          <a href="#" class="hover:text-gold transition-colors hoverable"
+            >Twitter / X</a
+          >
+          <a href="#" class="hover:text-gold transition-colors hoverable"
+            >Instagram</a
+          >
+          <a href="#" class="hover:text-gold transition-colors hoverable"
+            >Facebook</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <script>
+      // Init GSAP & Lenis
+      const lenis = new Lenis({
+        duration: 1.5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+      gsap.registerPlugin(ScrollTrigger);
+
+      // --- 1. PRELOADER ANIMATION ---
+      const loadTl = gsap.timeline();
+
+      // Reveal Text
+      loadTl
+        .to(".reveal-text-load", {
+          y: 0,
+          duration: 1.2,
+          ease: "power4.out",
+          stagger: 0.1,
+        })
+        // Reveal Subtitle
+        .to(
+          ".reveal-sub-load",
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+          },
+          "-=0.8"
+        )
+        // Expand Line
+        .to(
+          ".loader-bar",
+          {
+            scaleX: 1,
+            duration: 1.5,
+            ease: "expo.inOut",
+          },
+          "-=1"
+        )
+        // Exit Loader
+        .to(".preloader", {
+          yPercent: -100,
+          duration: 1.2,
+          ease: "power4.inOut",
+          delay: 0.2,
+        })
+        // Hero Elements Enter
+        .from(
+          ".reveal-hero",
+          {
+            y: 100,
+            opacity: 0,
+            duration: 1.5,
+            stagger: 0.1,
+            ease: "power3.out",
+          },
+          "-=0.8"
+        )
+        // Hero Image Slide In
+        .to(
+          ".reveal-hero-img",
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1.5,
+            ease: "power3.out",
+          },
+          "-=1.2"
+        );
+
+      // --- 2. MOBILE MENU ---
+      const menuToggle = document.querySelector(".mobile-menu-toggle");
+      const menuClose = document.querySelector(".mobile-menu-close");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+      let isMenuOpen = false;
+
+      const toggleMenu = () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          gsap.to(mobileMenu, {
+            transform: "translateY(0%)",
+            duration: 0.8,
+            ease: "power4.inOut",
+          });
+          gsap.fromTo(
+            mobileLinks,
+            { y: 50, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              stagger: 0.1,
+              ease: "power3.out",
+              delay: 0.3,
+            }
+          );
+        } else {
+          gsap.to(mobileMenu, {
+            transform: "translateY(-100%)",
+            duration: 0.8,
+            ease: "power4.inOut",
+          });
+        }
+      };
+
+      menuToggle.addEventListener("click", toggleMenu);
+      menuClose.addEventListener("click", toggleMenu);
+      mobileLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+
+      // --- 3. CURSOR & INTERACTION ---
+      const cursor = document.getElementById("cursor");
+      const hoverables = document.querySelectorAll(".hoverable");
+
+      document.addEventListener("mousemove", (e) => {
+        gsap.to(cursor, {
+          x: e.clientX,
+          y: e.clientY,
+          duration: 0.2,
+          ease: "power2.out",
+        });
+      });
+
+      hoverables.forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          cursor.classList.add("hovered");
+          gsap.to(el, { scale: 1.02, duration: 0.3 });
+        });
+        el.addEventListener("mouseleave", () => {
+          cursor.classList.remove("hovered");
+          gsap.to(el, { scale: 1, duration: 0.3 });
+        });
+      });
+
+      // --- 4. SCROLL REVEALS ---
+      const sections = document.querySelectorAll("section");
+      sections.forEach((sec) => {
+        const heading = sec.querySelector("h2");
+        if (heading) {
+          gsap.from(heading, {
+            scrollTrigger: { trigger: sec, start: "top 75%" },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out",
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

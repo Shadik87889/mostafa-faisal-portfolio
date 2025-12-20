@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="bn" class="antialiased selection:bg-gold selection:text-void">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>নির্বাচনী ইশতেহার ২০২৬ | ড. মোস্তফা ফয়সাল পারভেজ</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500;600;800&family=Hind+Siliguri:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              void: "#022c22",
+              cream: "#F9F7F2",
+              gold: "#D4AF37",
+              "gold-light": "#F3E5AB",
+            },
+            fontFamily: {
+              display: ['"Anek Bangla"', "sans-serif"],
+              body: ['"Hind Siliguri"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        background-color: #f9f7f2;
+        color: #022c22;
+        scroll-behavior: smooth;
+      }
+
+      .manifesto-nav-link {
+        transition: all 0.3s ease;
+      }
+
+      .manifesto-nav-link.active {
+        color: #d4af37;
+        border-left-color: #d4af37;
+        font-weight: 600;
+        background: linear-gradient(
+          90deg,
+          rgba(212, 175, 55, 0.1) 0%,
+          transparent 100%
+        );
+      }
+
+      /* Sticky Nav styling */
+      .sticky-nav {
+        position: sticky;
+        top: 8rem; /* Adjusted for better spacing below header */
+        max-height: calc(100vh - 10rem);
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body class="font-body bg-cream">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 w-full px-6 py-4 z-50 flex justify-between items-center bg-cream/95 backdrop-blur-md border-b border-void/5 shadow-sm"
+    >
+      <a
+        href="index.html"
+        class="font-display font-bold text-xl md:text-2xl uppercase text-void flex items-center gap-2 hover:text-gold transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+          />
+        </svg>
+        <span>মূল পাতা</span>
+      </a>
+      <div
+        class="font-display font-bold text-gold uppercase tracking-widest hidden md:block"
+      >
+        ভিশন ২০২৬
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header
+      class="pt-32 pb-16 md:pt-48 md:pb-24 px-6 bg-void text-cream text-center relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 opacity-10"
+        style="
+          background-image: radial-gradient(#d4af37 1px, transparent 1px);
+          background-size: 32px 32px;
+        "
+      ></div>
+      <div class="relative z-10 max-w-4xl mx-auto">
+        <span class="font-serif italic text-gold text-2xl mb-4 block"
+          >Manifesto 2026</span
+        >
+        <h1
+          class="font-display font-bold text-5xl md:text-8xl mb-8 leading-tight"
+        >
+          নির্বাচনী
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white"
+            >ইশতেহার</span
+          >
+        </h1>
+        <p
+          class="text-lg md:text-2xl font-light text-white/70 max-w-2xl mx-auto leading-relaxed"
+        >
+          বগুড়া-৪ (কাহালু-নন্দীগ্রাম) এর সর্বাঙ্গীন উন্নয়নের লক্ষ্যে ড.
+          মোস্তফা ফয়সাল পারভেজ এর সুনির্দিষ্ট কর্মপরিকল্পনা।
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Sticky Sidebar (Table of Contents) -->
+        <aside class="lg:col-span-3 hidden lg:block h-full relative">
+          <div class="sticky-nav">
+            <h3
+              class="font-display font-bold text-xl mb-6 uppercase tracking-widest text-void/40"
+            >
+              সূচিপত্র
+            </h3>
+            <ul
+              class="space-y-2 font-display text-lg border-l-2 border-void/10"
+            >
+              <li>
+                <a
+                  href="#intro"
+                  class="manifesto-nav-link block pl-4 py-2 border-l-2 border-transparent hover:text-gold transition-all text-void"
+                  >ভূমিকা</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#education"
+                  class="manifesto-nav-link block pl-4 py-2 border-l-2 border-transparent hover:text-gold transition-all text-void"
+                  >শিক্ষা ও গবেষণা</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#health"
+                  class="manifesto-nav-link block pl-4 py-2 border-l-2 border-transparent hover:text-gold transition-all text-void"
+                  >স্বাস্থ্যসেবা</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#youth"
+                  class="manifesto-nav-link block pl-4 py-2 border-l-2 border-transparent hover:text-gold transition-all text-void"
+                  >যুব ও কর্মসংস্থান</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#agriculture"
+                  class="manifesto-nav-link block pl-4 py-2 border-l-2 border-transparent hover:text-gold transition-all text-void"
+                  >কৃষি ও কৃষক</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#infrastructure"
+                  class="manifesto-nav-link block pl-4 py-2 border-l-2 border-transparent hover:text-gold transition-all text-void"
+                  >অবকাঠামো উন্নয়ন</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#law"
+                  class="manifesto-nav-link block pl-4 py-2 border-l-2 border-transparent hover:text-gold transition-all text-void"
+                  >সুশাসন ও নিরাপত্তা</a
+                >
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Content Body -->
+        <div class="lg:col-span-9 space-y-24">
+          <!-- Intro -->
+          <section
+            id="intro"
+            class="prose prose-lg max-w-none text-slate-700 scroll-mt-32"
+          >
+            <h2 class="font-display text-4xl font-bold text-void mb-6">
+              প্রিয় এলাকাবাসী,
+            </h2>
+            <p>
+              আসসালামু আলাইকুম। আমি বিশ্বাস করি, রাজনীতি কোনো পেশা নয়, বরং এটি
+              একটি ইবাদত এবং জনগণের সেবা করার মাধ্যম। আমার শিক্ষা, আন্তর্জাতিক
+              অভিজ্ঞতা এবং সততাকে পুঁজি করে আমি আপনাদের জন্য একটি আধুনিক,
+              দুর্নীতিমুক্ত এবং সমৃদ্ধ জনপদ গড়ে তুলতে চাই।
+            </p>
+            <blockquote
+              class="border-l-4 border-gold pl-6 italic font-serif text-2xl text-void my-8"
+            >
+              "আমার স্বপ্ন—এমন এক সমাজ, যেখানে কোনো মানুষ না খেয়ে থাকবে না,
+              বিনা চিকিৎসায় মারা যাবে না এবং শিক্ষার অভাবে কোনো মেধা ঝরে পড়বে
+              না।"
+            </blockquote>
+          </section>
+
+          <div class="w-full h-px bg-void/10"></div>
+
+          <!-- Education -->
+          <section id="education" class="scroll-mt-32">
+            <div class="flex items-center gap-4 mb-8">
+              <div
+                class="w-12 h-12 rounded-full bg-void flex items-center justify-center text-gold"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.499 5.216 50.554 50.554 0 00-2.658.813m-15.482 0a50.553 50.553 0 0116.336 1.484M12 3.493v.5"
+                  />
+                </svg>
+              </div>
+              <h2 class="font-display text-4xl font-bold text-void">
+                শিক্ষা ও গবেষণা
+              </h2>
+            </div>
+            <div class="bg-white border border-void/5 p-8 shadow-sm">
+              <ul class="space-y-6">
+                <li class="flex gap-4 items-start">
+                  <span class="font-display text-gold font-bold text-xl mt-1"
+                    >০১.</span
+                  >
+                  <div>
+                    <h4 class="font-bold text-lg text-void">
+                      আধুনিক পাবলিক লাইব্রেরি স্থাপন
+                    </h4>
+                    <p class="text-slate-600">
+                      কাহালু ও নন্দীগ্রাম উপজেলা সদরে দুটি আন্তর্জাতিক মানের
+                      পাবলিক লাইব্রেরি স্থাপন করা হবে।
+                    </p>
+                  </div>
+                </li>
+                <li class="flex gap-4 items-start">
+                  <span class="font-display text-gold font-bold text-xl mt-1"
+                    >০২.</span
+                  >
+                  <div>
+                    <h4 class="font-bold text-lg text-void">
+                      মেধাবী শিক্ষার্থীদের বৃত্তি
+                    </h4>
+                    <p class="text-slate-600">
+                      দরিদ্র কিন্তু মেধাবী শিক্ষার্থীদের জন্য 'ড. ফয়সাল পারভেজ
+                      শিক্ষা তহবিল' থেকে মাসিক বৃত্তির ব্যবস্থা।
+                    </p>
+                  </div>
+                </li>
+                <li class="flex gap-4 items-start">
+                  <span class="font-display text-gold font-bold text-xl mt-1"
+                    >০৩.</span
+                  >
+                  <div>
+                    <h4 class="font-bold text-lg text-void">
+                      কারিগরি শিক্ষা প্রসার
+                    </h4>
+                    <p class="text-slate-600">
+                      প্রতিটি হাই স্কুলে ভোকেশনাল কোর্স বাধ্যতামূলক করার উদ্যোগ
+                      গ্রহণ।
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Health -->
+          <section id="health" class="scroll-mt-32">
+            <div class="flex items-center gap-4 mb-8">
+              <div
+                class="w-12 h-12 rounded-full bg-void flex items-center justify-center text-gold"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  />
+                </svg>
+              </div>
+              <h2 class="font-display text-4xl font-bold text-void">
+                স্বাস্থ্যসেবা
+              </h2>
+            </div>
+            <div class="bg-white border border-void/5 p-8 shadow-sm">
+              <ul class="space-y-6">
+                <li class="flex gap-4 items-start">
+                  <span class="font-display text-gold font-bold text-xl mt-1"
+                    >০১.</span
+                  >
+                  <div>
+                    <h4 class="font-bold text-lg text-void">
+                      ২৪/৭ অ্যাম্বুলেন্স সার্ভিস
+                    </h4>
+                    <p class="text-slate-600">
+                      প্রতিটি ইউনিয়নের জন্য একটি করে ফ্রি অ্যাম্বুলেন্স সার্ভিস
+                      চালু করা হবে।
+                    </p>
+                  </div>
+                </li>
+                <li class="flex gap-4 items-start">
+                  <span class="font-display text-gold font-bold text-xl mt-1"
+                    >০২.</span
+                  >
+                  <div>
+                    <h4 class="font-bold text-lg text-void">
+                      কমিউনিটি ক্লিনিক আধুনিকায়ন
+                    </h4>
+                    <p class="text-slate-600">
+                      প্রত্যন্ত অঞ্চলের কমিউনিটি ক্লিনিকগুলোতে ঔষধ সরবরাহ
+                      নিশ্চিত করা ও টেলিমেডিসিন সেবা চালু।
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Youth -->
+          <section id="youth" class="scroll-mt-32">
+            <div class="flex items-center gap-4 mb-8">
+              <div
+                class="w-12 h-12 rounded-full bg-void flex items-center justify-center text-gold"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+                  />
+                </svg>
+              </div>
+              <h2 class="font-display text-4xl font-bold text-void">
+                যুব ও কর্মসংস্থান
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-void p-8 text-cream">
+                <h3 class="font-bold text-xl mb-4 text-gold">
+                  ফ্রিল্যান্সিং হাব
+                </h3>
+                <p class="font-light opacity-80">
+                  বেকার যুবকদের জন্য সরকারি খরচে আইটি প্রশিক্ষণ এবং প্রতিটি
+                  ইউনিয়নে হাই-স্পিড ইন্টারনেট জোন।
+                </p>
+              </div>
+              <div class="bg-void p-8 text-cream">
+                <h3 class="font-bold text-xl mb-4 text-gold">উদ্যোক্তা ঋণ</h3>
+                <p class="font-light opacity-80">
+                  নতুন ব্যবসায়িক আইডিয়ার জন্য জামানতবিহীন সহজ শর্তে ঋণ
+                  প্রদানের ব্যবস্থা।
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Agriculture -->
+          <section id="agriculture" class="scroll-mt-32">
+            <div class="flex items-center gap-4 mb-8">
+              <div
+                class="w-12 h-12 rounded-full bg-void flex items-center justify-center text-gold"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                  />
+                </svg>
+              </div>
+              <h2 class="font-display text-4xl font-bold text-void">
+                কৃষি ও কৃষক
+              </h2>
+            </div>
+            <div class="bg-white border border-void/5 p-8 shadow-sm">
+              <ul class="space-y-6">
+                <li class="flex gap-4 items-start">
+                  <span class="font-display text-gold font-bold text-xl mt-1"
+                    >✓</span
+                  >
+                  <p class="text-slate-700 text-lg">
+                    সার ও বীজের সুষম বণ্টন নিশ্চিত করা এবং কালোবাজারি রোধে কঠোর
+                    ব্যবস্থা।
+                  </p>
+                </li>
+                <li class="flex gap-4 items-start">
+                  <span class="font-display text-gold font-bold text-xl mt-1"
+                    >✓</span
+                  >
+                  <p class="text-slate-700 text-lg">
+                    কৃষিপণ্য সংরক্ষণের জন্য কাহালুতে একটি আধুনিক হিমাগার স্থাপন।
+                  </p>
+                </li>
+                <li class="flex gap-4 items-start">
+                  <span class="font-display text-gold font-bold text-xl mt-1"
+                    >✓</span
+                  >
+                  <p class="text-slate-700 text-lg">
+                    কৃষকদের জন্য বিনামূল্যে কৃষি যন্ত্রপাতি সরবরাহ সহায়তা।
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Infrastructure (Previously Missing) -->
+          <section id="infrastructure" class="scroll-mt-32">
+            <div class="flex items-center gap-4 mb-8">
+              <div
+                class="w-12 h-12 rounded-full bg-void flex items-center justify-center text-gold"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
+                  />
+                </svg>
+              </div>
+              <h2 class="font-display text-4xl font-bold text-void">
+                অবকাঠামো উন্নয়ন
+              </h2>
+            </div>
+            <div class="bg-white border border-void/5 p-8 shadow-sm">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="font-bold text-xl text-void mb-3">
+                    যোগাযোগ ব্যবস্থা
+                  </h4>
+                  <p class="text-slate-600 leading-relaxed">
+                    গ্রাম থেকে শহরে যাতায়াতের জন্য সকল কাঁচা রাস্তা পাকা করা
+                    হবে। পুরাতন ব্রিজ কালভার্ট দ্রুত সংস্কার করা হবে।
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-xl text-void mb-3">
+                    স্মার্ট ড্রেনেজ
+                  </h4>
+                  <p class="text-slate-600 leading-relaxed">
+                    পৌরসভা এলাকায় জলাবদ্ধতা নিরসনে আধুনিক ড্রেনেজ ব্যবস্থা ও
+                    বর্জ্য ব্যবস্থাপনা প্লান্ট স্থাপন।
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Law -->
+          <section id="law" class="scroll-mt-32 mb-20">
+            <div
+              class="bg-gradient-to-r from-void to-void/90 p-10 md:p-16 text-center text-cream"
+            >
+              <h2 class="font-display text-4xl font-bold mb-6">
+                সুশাসন ও নিরাপত্তা
+              </h2>
+              <p class="text-xl font-light mb-8 max-w-2xl mx-auto">
+                আমি নির্বাচিত হলে, এই এলাকায় কোনো চাঁদাবাজি, টেন্ডারবাজি বা
+                মাদকের স্থান হবে না। আইনের শাসন হবে সবার জন্য সমান।
+              </p>
+              <div
+                class="inline-block border border-gold px-8 py-3 uppercase tracking-widest text-sm font-bold"
+              >
+                জিরো টলারেন্স নীতি
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Simple -->
+    <footer
+      class="bg-void border-t border-white/10 py-12 text-center text-white/40 text-sm"
+    >
+      <p>This is a complete roadmap for Vision 2026.</p>
+      <p class="mt-2">
+        &copy; 2026 Dr. Mostofa Faisal Pervez. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- Scripts for Sticky Nav Active State -->
+    <script>
+      const observerOptions = {
+        root: null,
+        // Adjust margin to trigger active state earlier (near top of screen)
+        rootMargin: "-100px 0px -60% 0px",
+        threshold: 0,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            document.querySelectorAll(".manifesto-nav-link").forEach((link) => {
+              link.classList.remove("active");
+              // Match link href="#id" to section id="id"
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections that have IDs
+      document.querySelectorAll("section[id]").forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
